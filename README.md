@@ -1,6 +1,6 @@
 # Phaser 3 TypeScript Project Template 
 
-## Enlaces Phaser:
+## Phaser links:
 ```
 ● https://phaser.io
 ● https://photonstorm.github.io/phaser3-docs/
