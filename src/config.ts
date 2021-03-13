@@ -1,4 +1,4 @@
-import Nivel1 from "./escenas/nivel1";
+import Nivel1 from './escenas/nivel1';
 
 const config = {
     type: Phaser.AUTO,
