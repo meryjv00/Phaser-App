@@ -1,4 +1,12 @@
-# Phaser 3 TypeScript Project Template
+# Phaser 3 TypeScript Project Template 
+
+## Enlaces Phaser:
+```
+● https://phaser.io
+● https://photonstorm.github.io/phaser3-docs/
+● https://rexrainbow.github.io/phaser3-rex-notes/docs/site/
+● https://labs.phaser.io/index.html?dir=&q=
+```
 
 This quick-start project template combines Phaser 3.50 with [TypeScript 4](https://www.typescriptlang.org/) and uses [Rollup](https://rollupjs.org) for bundling.
 
