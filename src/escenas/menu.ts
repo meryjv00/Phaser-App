@@ -27,7 +27,10 @@ export default class Menu extends Phaser.Scene {
     cambiarEscena(jugarTxt: Phaser.GameObjects.Text, escena: string) {
         // Al hacer metodo interactivo, puedo acceder método on
         jugarTxt.on('pointerdown', () =>{
-            this.scene.start(escena)
+            this.scene.start(escena);
+            //Carga la escena HUD, que muestra nº de vidas y puntuación
+            this.scene.start('HUD');
+            this.scene.bringToTop('HUD');
         })
     }
     
