@@ -1,3 +1,5 @@
+import Constantes from '../constantes';
+
 export default class Menu extends Phaser.Scene {
     private width: number;
     private height: number;
@@ -13,10 +15,10 @@ export default class Menu extends Phaser.Scene {
 
     create() {
         const logo = this.add.image(this.width / 2, 70, 'logo1');
-        const jugarTxt: Phaser.GameObjects.Text = this.add.text(50,this.height/2,'JUGAR',
+        const jugarTxt: Phaser.GameObjects.Text = this.add.text(50,this.height/2,Constantes.MENU.JUGAR,
         {fontSize:'32px',color:'#FFFFFF'}).setInteractive();
 
-        this.cambiarEscena(jugarTxt,'Nivel1');
+        this.cambiarEscena(jugarTxt,Constantes.ESCENAS.NIVEL1);
     }
 
     /**
@@ -29,8 +31,8 @@ export default class Menu extends Phaser.Scene {
         jugarTxt.on('pointerdown', () =>{
             this.scene.start(escena);
             //Carga la escena HUD, que muestra nº de vidas y puntuación
-            this.scene.start('HUD');
-            this.scene.bringToTop('HUD');
+            this.scene.start(Constantes.ESCENAS.HUD);
+            this.scene.bringToTop(Constantes.ESCENAS.HUD);
         })
     }
     

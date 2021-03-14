@@ -1,3 +1,5 @@
+import Constantes from '../constantes';
+
 export default class Nivel1 extends Phaser.Scene {
     private width: number;
     private height: number;
@@ -14,6 +16,9 @@ export default class Nivel1 extends Phaser.Scene {
         this.height = this.cameras.main.height;
         this.vidas = 3;
         this.puntuacion = 0;
+        //inicializamos las del juego                
+        this.registry.set(Constantes.REGISTRO.VIDAS, this.vidas);        
+        this.registry.set(Constantes.REGISTRO.PUNTUACION, this.puntuacion);     
     }
 
     preload() {
@@ -34,13 +39,13 @@ export default class Nivel1 extends Phaser.Scene {
 
         vidasTxt.on('pointerdown', () => {
             this.vidas--;
-            this.registry.set('vidas', this.vidas);
-            this.events.emit('cambiarVidas');
+            this.registry.set(Constantes.REGISTRO.VIDAS, this.vidas);        
+            this.events.emit(Constantes.EVENTOS.VIDAS);
         });
         puntuacionTxt.on('pointerdown', () => {
             this.puntuacion++;
-            this.registry.set('puntuacion', this.puntuacion);
-            this.events.emit('cambiarPuntuacion');
+            this.registry.set(Constantes.REGISTRO.PUNTUACION, this.puntuacion);
+            this.events.emit(Constantes.EVENTOS.PUNTUACION);
         });
     }
 }
